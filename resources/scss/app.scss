@@ -8,31 +8,60 @@ body {
     color: $dark;
 }
 
-nav li:last-child a {
-    background: $primary;
+.jumbotron {
+    border-radius: 0 !important;
+}
+
+#logo {
+    color: $primary;
     &:hover {
-        background: $primary-hover;
+        color: $primary-hover;
+        text-decoration: none;
+    }
+}
+
+nav li:last-child a {
+    background: $btn;
+    &:hover {
+        background: $btn-hover;
     }
 }
 
 nav li a {
     transition: $smooth;
+    color: black;
+    text-decoration: none;
     &:hover {
         color: $primary;
+        text-decoration: none;
     }
 }
 section.hero {
-    background: $secondary;
+    background: linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8) ), url('/img/hero.png');
+    -webkit-background-size: cover;
+    -moz-background-size:  cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
+
+.hero-text {
+    color: $pure;
+}
+
+.menu-header {
+    color: $primary;
+}
+
 .size {
     background: $secondary;
+    color: $dark;
 }
 .add-to-cart {
-    border: 2px solid $primary;
-    color: $primary;
+    border: 2px solid $btn;
+    color: $btn;
     transition: $smooth;
     &:hover {
-        background: $primary;
+        background: $btn-hover;
         border-color: $pure;
         color: $pure;
     }
@@ -42,11 +71,24 @@ section.hero {
 }
 
 .btn-primary {
-    background: $primary;
+    background: $btn !important;
+    a {
+        color: $pure !important;
+    }
+    a:hover {
+        text-decoration: none;
+    }
     transition: $smooth;
     &:hover {
-        background: $primary-hover;
+        background: $btn-hover !important;
     }
+}
+
+.divider {
+    width: 10%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid $btn;
 }
 
 section.cart {
@@ -225,4 +267,8 @@ section.status {
 
   .StripeElement--webkit-autofill {
     background-color: #fefde5 !important;
+  }
+
+  .filler {
+      background: $pure;
   }
